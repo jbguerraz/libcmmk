@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libcmmk/libcmmk.h
+libusb-1.0/libusb.h
+-
+
+/home/jbguerraz/Sources/libcmmk/test/debug.c
+libcmmk/libcmmk.h
+-
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+

@@ -64,6 +64,7 @@ void sleep_ms(int ms) {
 
 int test_multilayer(struct cmmk *dev)
 {
+        fprintf(stderr, "test_multilayer\n");
 	/* Simple multilayer demo.
 	 *
 	 * This will set the ESC and arrow keys to a rainbow pattern, the main block to raindrop and
@@ -109,21 +110,76 @@ int test_multilayer(struct cmmk *dev)
 	cmmk_switch_multilayer(dev, 0);
 
 	cmmk_set_multilayer_map(dev, &map);
-	cmmk_set_active_effect(dev, CMMK_EFFECT_MULTILAYER);
+        /*fprintf(stderr, "CMMK_EFFECT_FULLY_LIT\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_FULLY_LIT);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_BREATHE\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_BREATHE);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_CYCLE\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_CYCLE);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_SINGLE\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_SINGLE);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_WAVE\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_WAVE);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_RIPPLE\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_RIPPLE);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_CROSS\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_CROSS);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_RAINDROPS\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_RAINDROPS);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_STARS\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_STARS);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_SNAKE\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_SNAKE);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_REC\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_REC);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_INDICATOR\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_INDICATOR);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_MULTILAYER_1\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_MULTILAYER_1);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_MULTILAYER_2\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_MULTILAYER_2);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_MULTILAYER_3\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_MULTILAYER_3);*/
+	/*sleep_ms(3000);*/
+        /*fprintf(stderr, "CMMK_EFFECT_MULTILAYER_4\n");*/
+	/*cmmk_set_active_effect(dev, CMMK_EFFECT_MULTILAYER_4);*/
+	/*sleep_ms(3000);*/
 
 	return 0;
 }
 
 int test_seq(struct cmmk *dev)
 {
+        fprintf(stderr, "test_seq\n");
 	/* Sequential demo.
 	 *
 	 * Lights up every key once, starting on the left and moving horizontally, row by row.
 	 */
 	struct rgb offcolor = MKRGB(0x000000);
-	struct rgb oncolor = MKRGB(0xffffff);
+	struct rgb oncolor = MKRGB(0x0055a4);
+	struct rgb oncolor2 = MKRGB(0xffffff);
+	struct rgb oncolor3 = MKRGB(0xef4135);
 	cmmk_set_control_mode(dev, CMMK_MANUAL);
-	cmmk_set_all_single(dev, &offcolor);
+	/*cmmk_set_all_single(dev, &oncolor);*/
+	/*sleep_ms(1000);*/
+	/*cmmk_set_all_single(dev, &oncolor2);*/
+	/*sleep_ms(1000);*/
+	/*cmmk_set_all_single(dev, &oncolor3);*/
+	/*sleep_ms(1000);*/
 	for (int row = 0; row < 7; ++row) {
 		for (int col = 0; col < 22; ++col) {
 			if (g_stop) { return 1; }
@@ -145,11 +201,12 @@ int main(int argc, char** argv)
 
 	int product;
 
+
 	if (cmmk_find_device(&product) != 0) {
 		return 1;
 	}
-
-	if (cmmk_attach(&state, product, CMMK_LAYOUT_US_L) != 0) {
+	fprintf(stderr, "ok%d", product);
+	if (cmmk_attach(&state, product, CMMK_LAYOUT_FR_CK530) != 0) {
 		return 1;
 	}
 

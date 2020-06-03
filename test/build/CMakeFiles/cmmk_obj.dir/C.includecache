@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libcmmk/libcmmk.h
+libusb-1.0/libusb.h
+-
+
+/home/jbguerraz/Sources/libcmmk/src/keymap_eu.h
+
+/home/jbguerraz/Sources/libcmmk/src/keymap_fr.h
+
+/home/jbguerraz/Sources/libcmmk/src/keymap_us.h
+
+/home/jbguerraz/Sources/libcmmk/src/libcmmk.c
+libcmmk/libcmmk.h
+-
+unistd.h
+-
+string.h
+-
+assert.h
+-
+libusb-1.0/libusb.h
+-
+stdio.h
+-
+ctype.h
+-
+keymap_eu.h
+/home/jbguerraz/Sources/libcmmk/src/keymap_eu.h
+keymap_us.h
+/home/jbguerraz/Sources/libcmmk/src/keymap_us.h
+keymap_fr.h
+/home/jbguerraz/Sources/libcmmk/src/keymap_fr.h
+

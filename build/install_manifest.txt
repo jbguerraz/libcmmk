@@ -1,0 +1,5 @@
+/home/jbguerraz/Sources/libcmmk/build/dist/lib64/libcmmk.so
+/home/jbguerraz/Sources/libcmmk/build/dist/lib64/libcmmk.a
+/home/jbguerraz/Sources/libcmmk/build/dist/include/libcmmk.h
+/home/jbguerraz/Sources/libcmmk/build/dist/bin/cmmk-test
+/home/jbguerraz/Sources/libcmmk/build/dist/bin/cmmk-debug

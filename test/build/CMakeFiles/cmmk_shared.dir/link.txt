@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libcmmk.so -o libcmmk.so CMakeFiles/cmmk_obj.dir/src/libcmmk.c.o 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcmmk.a  CMakeFiles/cmmk_obj.dir/src/libcmmk.c.o
+/usr/bin/ranlib libcmmk.a

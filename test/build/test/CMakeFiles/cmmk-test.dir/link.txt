@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/cmmk-test.dir/test.c.o  -o cmmk-test -Wl,-rpath,/home/jbguerraz/Sources/libcmmk/build: ../libcmmk.so -lusb-1.0 
